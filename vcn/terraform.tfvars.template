@@ -1,0 +1,13 @@
+tenancy_ocid = ""
+user_ocid    = ""
+private_key_path  = ""
+fingerprint  = ""
+region       = ""
+compartment_id = ""
+vcn_name = "demo-vcn"
+vcn_cidr = [ "10.0.0.0/16" ]
+igw_name = "demo-igw"
+rt_name = "public-rt"
+public_sl_name = "public-sl"
+vcn_dns_label = "demo-vcn-dns"
+public_sl_dns_label = "public-subnet-dns"
