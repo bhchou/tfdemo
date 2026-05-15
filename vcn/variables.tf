@@ -28,6 +28,16 @@ variable "public_sl_name" {
   description = "public subnet security list name"
 }
 
+variable "public_subnet_name" {
+  type        = string
+  description = "public subnet name"
+}
+
+variable "public_subnet_dns_label" {
+  type        = string
+  description = "public subnet dns label"
+}
+
 variable "compartment_id" {
   type        = string
   description = "資源建在哪個 Compartment（demo-compartment OCID）"
@@ -48,81 +58,3 @@ variable "vcn_dns_label" {
   description = "vcn dns label"
 }
 
-variable "public_sl_dns_label" {
-  type        = string
-  description = "public subnet security list dns label"
-}
-
-/*
-variable "tenancy_ocid" {
-  type        = string
-  description = "The Tanency of OCI"
-}
-variable "user_ocid" {
-  type        = string
-  description = "User to login to OCI"
-}
-variable "private_key_path" {
-  type        = string
-  description = "The private key to use for connecting OCI"
-}
-variable "fingerprint" {
-  type        = string
-  description = "The fingerprint to connect OCI"
-}
-variable "region" {
-  type        = string
-  description = "The region to provision the resources in"
-}
-variable "compartment_id" {
-  type        = string
-  description = "compartment ocid that vcn resides in"
-}
-variable "vcn_name" {
-  type        = string
-  description = "vcn name"
-}
-variable "vcn_dns_label" {
-  type        = string
-  description = "vcn dns label"
-}
-variable "private_subnet_cidr" {
-  type        = string
-  description = "cidr for private subnet"
-}
-variable "public_subnet_cidr" {
-  type        = string
-  description = "cidr for public subnet"
-}
-variable "eklb_subnet_cidr" {
-  type        = string
-  description = "cidr for public subnet"
-}
-variable "ekbastion_subnet_cidr" {
-  type        = string
-  description = "cidr for public subnet"
-}
-variable "vcn_cidrs" {
-  type        = list(string)
-  description = "vcn cidr"
-}
-variable "security_lists" {
-  type = map(object({
-    egress_rules = map(object({
-      protocol    = string
-      ports       = object({ min : number, max : number })
-      destination = string
-      destination_type = string
-      optionals   = map(any)
-    }))
-    ingress_rules = map(object({
-      protocol  = string
-      ports     = object({ min : number, max : number })
-      source    = string
-      source_type = string
-      optionals   = map(any)
-    }))
-  }))
-}
-
-*/

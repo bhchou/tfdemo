@@ -51,8 +51,8 @@ resource "oci_core_subnet" "public" {
   compartment_id    = var.compartment_id
   vcn_id            = oci_core_vcn.demo.id
   cidr_block        = var.subnet_cidr
-  display_name      = var.public_sl_name
-  dns_label         = var.public_sl_dns_label 
+  display_name      = var.public_subnet_name
+  dns_label         = var.public_subnet_dns_label 
   route_table_id    = oci_core_route_table.public_rt.id
   security_list_ids = [oci_core_security_list.public_sl.id]
 
